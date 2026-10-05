@@ -1,0 +1,79 @@
+{
+  "intenciones": [
+    {
+      "etiqueta": "saludo",
+      "patrones": ["hola", "buenos días", "buenas tardes", "buenas noches", "hey", "qué tal", "saludos", "hola buenas", "buen día", "holi"],
+      "respuestas": ["¡Hola! Bienvenido al servicio al cliente del banco. ¿En qué puedo ayudarte?", "¡Buen día! Soy Chatty, tu asistente bancario. ¿Qué necesitas?", "¡Hola! ¿Cómo puedo ayudarte hoy?"]
+    },
+    {
+      "etiqueta": "despedida",
+      "patrones": ["adiós", "adios", "hasta luego", "nos vemos", "chao", "bye", "hasta pronto", "me voy", "eso es todo", "nada más"],
+      "respuestas": ["¡Hasta luego! Que tengas un buen día.", "Gracias por comunicarte con nosotros. ¡Hasta pronto!", "¡Nos vemos! Recuerda que estoy aquí cuando me necesites."]
+    },
+    {
+      "etiqueta": "agradecimiento",
+      "patrones": ["gracias", "muchas gracias", "gracias por la ayuda", "te lo agradezco", "muy amable", "excelente gracias", "perfecto gracias", "mil gracias"],
+      "respuestas": ["¡No hay de qué, a tu servicio!", "Con gusto. ¿Hay algo más en lo que pueda ayudarte?", "¡Para eso estoy!"]
+    },
+    {
+      "etiqueta": "informacion",
+      "patrones": ["cuál es tu nombre", "cómo te llamas", "quién eres", "qué eres", "qué puedes hacer", "en qué me ayudas", "eres un robot", "tu nombre"],
+      "respuestas": ["Mi nombre es Chatty y soy el asistente virtual del banco. Puedo ayudarte con saldos, cuentas, tarjetas, transferencias, préstamos y más.", "Soy Chatty, un asistente virtual. Pregúntame sobre tus cuentas, tarjetas o servicios del banco."]
+    },
+    {
+      "etiqueta": "hora",
+      "patrones": ["qué hora es", "me puedes decir la hora", "dime la hora", "sabes la hora", "la hora por favor", "tienes la hora"],
+      "respuestas": ["No puedo verificar la hora en este momento.", "Lo siento, no tengo acceso a la hora actual."]
+    },
+    {
+      "etiqueta": "consultar_saldo",
+      "patrones": ["quiero saber mi saldo", "cuánto dinero tengo", "consultar saldo", "ver mi saldo", "cuál es mi saldo", "cuánto tengo en mi cuenta", "saldo disponible", "revisar mi saldo"],
+      "respuestas": ["Puedes consultar tu saldo en la banca en línea, en la app móvil o en cualquier cajero automático.", "Para ver tu saldo, ingresa a la app del banco y selecciona tu cuenta. También puedes hacerlo en un cajero."]
+    },
+    {
+      "etiqueta": "abrir_cuenta",
+      "patrones": ["quiero abrir una cuenta", "cómo abro una cuenta", "requisitos para abrir cuenta", "abrir cuenta de ahorro", "crear una cuenta", "nueva cuenta", "qué necesito para abrir una cuenta", "abrir cuenta corriente"],
+      "respuestas": ["Para abrir una cuenta necesitas tu DUI vigente, un comprobante de domicilio y un depósito inicial. Puedes iniciar el trámite en cualquier sucursal.", "Con tu DUI y un comprobante de domicilio puedes abrir tu cuenta en una sucursal o desde la app."]
+    },
+    {
+      "etiqueta": "tarjeta_perdida",
+      "patrones": ["perdí mi tarjeta", "me robaron la tarjeta", "bloquear tarjeta", "bloquear mi tarjeta", "extravié mi tarjeta", "no encuentro mi tarjeta", "robo de tarjeta", "tarjeta perdida"],
+      "respuestas": ["Lamento lo ocurrido. Puedes bloquear tu tarjeta de inmediato desde la app o llamando a la línea de atención 24 horas.", "Te recomiendo bloquear tu tarjeta cuanto antes desde la app. Luego puedes solicitar una reposición en una sucursal."]
+    },
+    {
+      "etiqueta": "transferencia",
+      "patrones": ["quiero hacer una transferencia", "cómo transfiero dinero", "enviar dinero", "transferir a otra cuenta", "pasar dinero a otra cuenta", "hacer un envío de dinero", "transferencia bancaria", "mandar dinero"],
+      "respuestas": ["Puedes hacer transferencias desde la banca en línea o la app, en la opción 'Transferencias'. Necesitarás el número de cuenta del destinatario.", "Para transferir, entra a la app, selecciona 'Transferencias' e ingresa los datos de la cuenta destino."]
+    },
+    {
+      "etiqueta": "prestamo",
+      "patrones": ["quiero un préstamo", "solicitar préstamo", "cómo pido un préstamo", "requisitos para préstamo", "necesito un crédito", "préstamo personal", "información de préstamos", "pedir un crédito"],
+      "respuestas": ["Para solicitar un préstamo necesitas tu DUI, constancia de salario y estar al día con tus obligaciones. Un asesor evaluará tu solicitud.", "Puedes solicitar un préstamo personal en sucursal o desde la app. Te pediremos DUI y constancia de ingresos."]
+    },
+    {
+      "etiqueta": "horario_atencion",
+      "patrones": ["a qué hora abren", "cuál es el horario", "horario de atención", "hasta qué hora atienden", "a qué hora cierran", "abren los sábados", "horario del banco", "qué días atienden"],
+      "respuestas": ["Nuestras sucursales atienden de lunes a viernes de 8:00 a.m. a 5:00 p.m. y los sábados de 8:00 a.m. a 12:00 m.", "El horario es de lunes a viernes de 8:00 a.m. a 5:00 p.m. La app y la banca en línea están disponibles 24/7."]
+    },
+    {
+      "etiqueta": "sucursales",
+      "patrones": ["dónde hay una sucursal", "sucursal más cercana", "ubicación de agencias", "dónde queda el banco", "dirección de la sucursal", "dónde hay un cajero", "cajero más cercano", "agencias del banco"],
+      "respuestas": ["Puedes encontrar la sucursal o cajero más cercano en la sección 'Ubicaciones' de la app.", "En la app del banco, en 'Ubicaciones', verás un mapa con todas nuestras agencias y cajeros."]
+    },
+    {
+      "etiqueta": "recuperar_contrasena",
+      "patrones": ["olvidé mi contraseña", "no puedo entrar a la app", "recuperar contraseña", "cambiar mi contraseña", "olvidé mi usuario", "no puedo iniciar sesión", "restablecer contraseña", "bloquearon mi usuario"],
+      "respuestas": ["En la pantalla de inicio de sesión toca '¿Olvidaste tu contraseña?' y sigue los pasos para restablecerla.", "Puedes restablecer tu contraseña desde la app con la opción '¿Olvidaste tu contraseña?'. Si tu usuario está bloqueado, comunícate con la línea de atención."]
+    },
+    {
+      "etiqueta": "cargo_no_reconocido",
+      "patrones": ["tengo un cargo que no reconozco", "me cobraron de más", "cobro extraño en mi cuenta", "quiero hacer un reclamo", "no hice esa compra", "cargo desconocido", "me descontaron dinero", "reportar un cobro"],
+      "respuestas": ["Lamento el inconveniente. Puedes reportar el cargo desde la app en 'Reclamos' o llamando a la línea de atención. Te recomiendo bloquear la tarjeta si sospechas fraude.", "Para reportar un cargo no reconocido, ingresa a 'Reclamos' en la app. Un analista revisará tu caso."]
+    },
+    {
+      "etiqueta": "hablar_asesor",
+      "patrones": ["quiero hablar con una persona", "comunícame con un asesor", "hablar con un agente", "necesito un humano", "atención personalizada", "número de atención al cliente", "quiero llamar al banco", "hablar con alguien"],
+      "respuestas": ["Puedes comunicarte con un asesor llamando a nuestra línea de atención al cliente, disponible 24 horas.", "Con gusto te comunicamos con un asesor. Llama a la línea de atención al cliente o visita cualquier sucursal."]
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import string
 import pickle
 import random
 import json
+import unicodedata
 from nltk.stem import WordNetLemmatizer
 
 lematizador = WordNetLemmatizer()
@@ -10,11 +11,16 @@ lematizador = WordNetLemmatizer()
 with open('model.pkl', 'rb') as f:
     vectorizar, le, model = pickle.load(f)
 
-with open('intenciones.json', 'r', encoding='uft-8') as file:
+with open('intenciones.json', 'r', encoding='utf-8') as file:
     data = json.load(file)
+
+def quitar_tildes(texto):
+    texto = unicodedata.normalize('NFD', texto)
+    return ''.join(c for c in texto if unicodedata.category(c) != 'Mn')
 
 def preproceso(oracion):
     oracion = oracion.lower()
+    oracion = quitar_tildes(oracion)
     oracion = ''.join([char for char in oracion if char not in string.punctuation])
     tokens = nltk.word_tokenize(oracion)
     tokens = [lematizador.lemmatize(word) for word in tokens if word not in nltk.corpus.stopwords.words('spanish')]
@@ -38,7 +44,7 @@ def obtener_respuesta(entrada_usuario):
                 return random.choice(intencion['respuestas'])
 
 def chat():
-    print("¡Hola! Spy Chatty. Escribe 'salir' para terminar la conversación.")
+    print("¡Hola! Soy Chatty. Escribe 'salir' para terminar la conversación.")
     while True:
         entrada_usuario = input("Tú: ")
         if entrada_usuario.lower() == 'salir':

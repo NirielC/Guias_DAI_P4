@@ -9,19 +9,19 @@ from sklearn.svm import SVC
 
 lematizador = WordNetLemmatizer()
 
-with open('intenciones.json', 'r', encoding='uft-8') as file:
+with open('intenciones.json', 'r', encoding='utf-8') as file:
     data = json.load(file)
 
 oraciones = []
 etiquetas = []
-respuestas = []
+respuestas = {}
 
 for intencion in data['intenciones']:
     for patron in intencion['patrones']:
         tokens = nltk.word_tokenize(patron)
         oraciones.append(' '.join(tokens))
         etiquetas.append(intencion['etiqueta'])
-    respuestas[intencion['etiqueta']] = intencion['respuesta']
+    respuestas[intencion['etiqueta']] = intencion['respuestas']
 
 def preproceso(oracion):
     oracion = oracion.lower()
@@ -38,10 +38,10 @@ x = vectorizar.fit_transform(oraciones_procesadas)
 le = LabelEncoder()
 y = le.fit_transform(etiquetas)
 
-model = SVC(kernel='linear', probability=True)
+model = SVC(kernel='linear', probability=True, random_state=42)
 model.fit(x, y)
 
-with open('model.pk1', 'wb') as f:
+with open('model.pkl', 'wb') as f:
     pickle.dump((vectorizar, le, model), f)
 
 print("Modelo entrenado y guardado exitosamente")
